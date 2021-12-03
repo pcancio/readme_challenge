@@ -32,7 +32,7 @@ THEN I am taken to the corresponding section of the README
 ## Links
 
 Github: https://github.com/pcancio/readme_challenge
-Walk-through video: ''
+Walk-through video: https://watch.screencastify.com/v/HJbE6qnLC7H8Um5aRVI8
 
 
 
