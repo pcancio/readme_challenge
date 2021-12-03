@@ -19,22 +19,23 @@ const questions = [{
     {
         type: 'input',
         name: 'installation',
-        message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.'
+        message: 'What are the steps required to install your project?'
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions and examples for use. Include screenshots as needed.'
+        message: 'Provide instructions and examples for use.'
     },
     {
         type: 'input',
         name: 'credits',
-        message: 'List your collaborators, if any, with links to their GitHub profiles. <br> If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. <br> If you followed tutorials, include links to those here as well.'
+        message: 'List your collaborators with links to their GitHub profiles.'
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
-        message: 'please list the license'
+        message: 'please choose the license',
+        choices: ['MIT', 'none']
     },
     {
         type: 'input',
@@ -52,6 +53,17 @@ const questions = [{
         name: 'tests',
         message: 'enter any tests for the app and provide examples'
     },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'enter your github username'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'enter your email'
+    },
+
 ];
 
 // TODO: Create a function to write README file
