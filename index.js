@@ -27,11 +27,6 @@ const questions = [{
         message: 'Provide instructions and examples for use.'
     },
     {
-        type: 'input',
-        name: 'credits',
-        message: 'List your collaborators with links to their GitHub profiles.'
-    },
-    {
         type: 'list',
         name: 'license',
         message: 'please choose the license',
@@ -62,7 +57,7 @@ const questions = [{
         type: 'input',
         name: 'email',
         message: 'enter your email'
-    },
+    }
 
 ];
 
@@ -77,8 +72,7 @@ function init() {
             questions
         )
         .then(answers => {
-            console.log('generate readme.md');
-            writeToFile('readme.md', generateMarkdown({...answers }));
+            writeToFile('generatedreadme.md', generateMarkdown({...answers }));
         })
         .catch((error) => {
             if (error.isTtyError) {

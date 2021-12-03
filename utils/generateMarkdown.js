@@ -1,33 +1,77 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-
+    if (license === 'none') {
+        return '';
+    }
+    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-    if (license !== 'none') {
-        return `![Github license](https://img.shields.ig/badge/license-${license}-red.svg)`
-    };
-    return ''
+    if (license === 'none') {
+        return '';
+    }
+    return 'https://choosealicense.com/licenses/mit/';
 }
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-    return `# ${answers.title}
-      # ${answers.description}
-      # ${answers.installation}
-      # ${answers.usage}
-      # ${answers.credits}
-      # ${answers.license}
-      # ${answers.features}
-      # ${answers.contributing}
-      # ${answers.tests}
-    ${renderLicenseBadge(answers.license)}
+    return `# ${answers.title} ${renderLicenseBadge(answers.license)}
+
+## Description
+
+${answers.description}
+
+---
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+---
+## Installation
+
+${answers.installation}
+      
+---
+## Usage
+
+${answers.usage}
+
+---
+## License
+
+${answers.license}
+
+${renderLicenseLink(answers.license)}
+
+${renderLicenseBadge(answers.license)}
+
+---
+## Contributing
+
+${answers.contributing}
+
+---
+## Tests
+
+${answers.tests}
+
+---
+## Questions
+
+Link to my Github: https://github.com/${answers.github}
+
+If you have any questions, email me at ${answers.email}
 `;
 }
 
