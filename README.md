@@ -3,16 +3,9 @@
 ## Description
 A program using Node.JS to create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
 
-## Table of Contents
-
 ## Installation
 The application will be invoked by using the following command:
-
 node index.js
-
-
-## Usage
-to dynamically generate a readme file
 
 ## User-Story
 AS A developer
@@ -38,6 +31,7 @@ THEN I am taken to the corresponding section of the README
 
 ## Links
 
+Github: https://github.com/pcancio/readme_challenge
 
 
 
